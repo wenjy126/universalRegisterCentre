@@ -1,0 +1,26 @@
+server:
+  port: 8000
+  tomcat.uri-encoding: utf-8
+  servlet:
+    session:
+      timeout: 1440m
+
+spring:
+  application:
+    name: urc
+  datasource:
+    url: jdbc:mysql://202.135.136.180:3306/urcDB?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useAffectedRows=true&serverTimezone=GMT%2B8
+    username: root
+    password: jn2018.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:sqlclient/*.xml
+  type-aliases-package: com.netzoom.urc.model
+
+logging:
+  level:
+    root: debug
+  path: /main/apps/urc/logs/
+  file: /main/apps/urc/logs/urc.log
+
